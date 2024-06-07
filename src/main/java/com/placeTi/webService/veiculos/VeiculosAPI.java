@@ -19,7 +19,7 @@ public class VeiculosAPI {
         return veiculosFacade.criar(veiculosDto);
     }
 
-    @PutMapping("/{veiculosId}")
+    @PutMapping("{veiculosId}")
     @ResponseBody
     public  VeiculosDto atualizar(@PathVariable("veiculosId") Long veiculosId,
                                   @RequestBody VeiculosDto veiculosDto) {

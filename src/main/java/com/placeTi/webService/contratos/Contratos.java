@@ -21,7 +21,9 @@ public class Contratos {
     private String numeroRegistroEletronico;
 
     @OneToMany(mappedBy = "contrato")
-    private List<Veiculos> veiculo;
+    private List<Veiculos> veiculos;
+
+
 
     public Long getId() {
         return id;
@@ -56,10 +58,10 @@ public class Contratos {
     }
 
     public List<Veiculos> getVeiculo() {
-        return veiculo;
+        return veiculos;
     }
 
     public void setVeiculo(List<Veiculos> veiculo) {
-        this.veiculo = veiculo;
+        this.veiculos = veiculo;
     }
 }

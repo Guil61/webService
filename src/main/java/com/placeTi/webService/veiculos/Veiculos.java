@@ -18,7 +18,7 @@ public class Veiculos {
     private String numeroChassi;
 
     @ManyToOne
-    @JoinColumn(name = "contrato_id") // Nome da coluna na tabela veiculos que referencia o contrato
+    @JoinColumn(name = "contrato_id")
     private Contratos contrato;
 
     public Long getId() {

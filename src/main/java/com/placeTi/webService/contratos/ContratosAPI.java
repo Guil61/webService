@@ -35,6 +35,6 @@ public class ContratosAPI {
     @DeleteMapping("/{contratosId}")
     @ResponseBody
     public  String deletar(@PathVariable("contratosId") Long contratosId){
-        return contratosFacade.delet(contratosId);
+        return contratosFacade.delete(contratosId);
     }
 }

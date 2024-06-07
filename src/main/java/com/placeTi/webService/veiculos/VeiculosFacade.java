@@ -26,13 +26,13 @@ public class VeiculosFacade {
     }
 
     public VeiculosDto atualizar(VeiculosDto veiculosDto, Long veiculosId){
-            Veiculos veiculosDataBase = repository.getOne(veiculosId);
-            veiculosDataBase.setContrato(veiculosDto.getContrato());
-            veiculosDataBase.setNumeroChassi(veiculosDto.getNumeroChassi());
-            veiculosDataBase.setPlaca(veiculosDto.getPlaca());
-            veiculosDataBase.setNumeroGravame(veiculosDto.getNumeroGravame());
-            veiculosDataBase.setNumeroRenavam(veiculosDto.getNumeroRenavam());
-            return veiculosDto;
+        Veiculos veiculosDataBase = repository.getReferenceById(veiculosId);
+        veiculosDataBase.setContrato(veiculosDto.getContrato());
+        veiculosDataBase.setNumeroChassi(veiculosDto.getNumeroChassi());
+        veiculosDataBase.setPlaca(veiculosDto.getPlaca());
+        veiculosDataBase.setNumeroGravame(veiculosDto.getNumeroGravame());
+        veiculosDataBase.setNumeroRenavam(veiculosDto.getNumeroRenavam());
+        return veiculosDto;
     }
 
     private VeiculosDto converter (Veiculos veiculos){

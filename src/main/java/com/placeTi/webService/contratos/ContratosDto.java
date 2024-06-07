@@ -10,7 +10,7 @@ public class ContratosDto {
     private String nomeDevedor;
     private LocalDate dataNascimentoDevedor;
     private String  numeroRegistroEletronico;
-    private List<Veiculos> veiculo;
+    private List<Veiculos> veiculos;
 
     public Long getId() {
         return id;
@@ -45,11 +45,11 @@ public class ContratosDto {
     }
 
     public List<Veiculos> getVeiculo() {
-        return veiculo;
+        return veiculos;
     }
 
     public void setVeiculo(List<Veiculos> veiculo) {
-        this.veiculo = veiculo;
+        this.veiculos = veiculo;
     }
 
 }

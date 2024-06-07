@@ -49,7 +49,7 @@ public class ContratosFacade {
                 .map(this::converter).collect(Collectors.toList());
     }
 
-    public String  delet (Long contratosId){
+    public String delete(Long contratosId){
         repository.deleteById(contratosId);
         return "DELETED";
     }
