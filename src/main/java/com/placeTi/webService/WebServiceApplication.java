@@ -2,8 +2,13 @@ package com.placeTi.webService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 
 @SpringBootApplication
+@EntityScan("com.placeTi.webService")
+@EnableJpaRepositories(basePackages = "com.placeTi.webService")
 public class WebServiceApplication {
 
 	public static void main(String[] args) {
