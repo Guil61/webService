@@ -9,7 +9,7 @@ public class ContratosDto {
     private Long id;
     private String nomeDevedor;
     private LocalDate dataNascimentoDevedor;
-    private String  numeroRegistroEletronic;
+    private String  numeroRegistroEletronico;
     private List<Veiculos> veiculo;
 
     public Long getId() {
@@ -36,12 +36,12 @@ public class ContratosDto {
         this.dataNascimentoDevedor = dataNascimentoDevedor;
     }
 
-    public String getNumeroRegistroEletronic() {
-        return numeroRegistroEletronic;
+    public String getNumeroRegistroEletronico() {
+        return numeroRegistroEletronico;
     }
 
-    public void setNumeroRegistroEletronic(String numeroRegistroEletronic) {
-        this.numeroRegistroEletronic = numeroRegistroEletronic;
+    public void setNumeroRegistroEletronic(String numeroRegistroEletronico) {
+        this.numeroRegistroEletronico = numeroRegistroEletronico;
     }
 
     public List<Veiculos> getVeiculo() {

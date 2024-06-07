@@ -7,9 +7,10 @@ import jakarta.persistence.*;
 @Entity
 @Table
 public class Veiculos {
-    @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
+    @Id
     private Long id;
     private String numeroGravame;
     private String numeroRenavam;

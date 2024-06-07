@@ -11,9 +11,10 @@ import java.util.List;
 @Entity
 @Table
 public class Contratos {
-    @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
+    @Id
     private Long id;
     private String nomeDevedor;
     private LocalDate dataNascimentoDevedor;

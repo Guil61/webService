@@ -19,7 +19,7 @@ public class VeiculosFacade {
         veiculos.setNumeroChassi(veiculosDto.getNumeroChassi());
         veiculos.setPlaca(veiculosDto.getPlaca());
         veiculos.setNumeroGravame(veiculosDto.getNumeroGravame());
-        veiculos.setNumeroRenavam(veiculos.getNumeroRenavam());
+        veiculos.setNumeroRenavam(veiculosDto.getNumeroRenavam());
         repository.save(veiculos);
         veiculosDto.setId(veiculos.getId());
         return veiculosDto;

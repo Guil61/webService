@@ -21,7 +21,6 @@ public class VeiculosAPI {
 
     @PutMapping("/{veiculosId}")
     @ResponseBody
-
     public  VeiculosDto atualizar(@PathVariable("veiculosId") Long veiculosId,
                                   @RequestBody VeiculosDto veiculosDto) {
         return veiculosFacade.atualizar(veiculosDto, veiculosId);

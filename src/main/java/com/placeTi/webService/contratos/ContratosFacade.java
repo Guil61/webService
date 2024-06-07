@@ -16,7 +16,7 @@ public class ContratosFacade {
         contratos.setVeiculo(contratosDto.getVeiculo());
         contratos.setNomeDevedor(contratosDto.getNomeDevedor());
         contratos.setDataNascimentoDevedor(contratosDto.getDataNascimentoDevedor());
-        contratos.setNumeroRegistroEletronico(contratosDto.getNumeroRegistroEletronic());
+        contratos.setNumeroRegistroEletronico(contratosDto.getNumeroRegistroEletronico());
         repository.save(contratos);
         contratosDto.setId(contratos.getId());
         return contratosDto;
@@ -27,7 +27,7 @@ public class ContratosFacade {
         contratosDataBase.setVeiculo(contratosDto.getVeiculo());
         contratosDataBase.setNomeDevedor(contratosDto.getNomeDevedor());
         contratosDataBase.setDataNascimentoDevedor(contratosDto.getDataNascimentoDevedor());
-        contratosDataBase.setNumeroRegistroEletronico(contratosDto.getNumeroRegistroEletronic());
+        contratosDataBase.setNumeroRegistroEletronico(contratosDto.getNumeroRegistroEletronico());
         return contratosDto;
     }
 
