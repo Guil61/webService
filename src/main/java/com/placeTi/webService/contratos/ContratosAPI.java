@@ -26,10 +26,17 @@ public class ContratosAPI {
         return contratosFacade.atualizar(contratosDto, contratosId);
     }
 
-    @GetMapping
+    @GetMapping("")
     @ResponseBody
     public List<ContratosDto> getall(){
         return contratosFacade.getall();
+
+    }
+
+    @GetMapping("/{contratosId}")
+    @ResponseBody
+    public ContratosDto getById(@PathVariable("contratosId") Long contratosId){
+        return contratosFacade.getById(contratosId);
     }
 
     @DeleteMapping("/{contratosId}")

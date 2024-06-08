@@ -12,7 +12,7 @@ public class ContratosFacade {
     private ContratosRepository repository;
 
     public ContratosDto criar(ContratosDto contratosDto){
-        Contratos  contratos = new Contratos();
+        Contratos contratos = new Contratos();
         contratos.setVeiculo(contratosDto.getVeiculo());
         contratos.setNomeDevedor(contratosDto.getNomeDevedor());
         contratos.setDataNascimentoDevedor(contratosDto.getDataNascimentoDevedor());
@@ -22,31 +22,36 @@ public class ContratosFacade {
         return contratosDto;
     }
 
-    public ContratosDto atualizar(ContratosDto  contratosDto, Long contratosId){
+    public ContratosDto atualizar(ContratosDto contratosDto, Long contratosId){
         Contratos contratosDataBase =  repository.getOne(contratosId);
         contratosDataBase.setVeiculo(contratosDto.getVeiculo());
         contratosDataBase.setNomeDevedor(contratosDto.getNomeDevedor());
         contratosDataBase.setDataNascimentoDevedor(contratosDto.getDataNascimentoDevedor());
         contratosDataBase.setNumeroRegistroEletronico(contratosDto.getNumeroRegistroEletronico());
+        repository.save(contratosDataBase); // Salvar as alterações no banco de dados
         return contratosDto;
     }
 
-    private ContratosDto converter (Contratos contratos){
+    private ContratosDto converter(Contratos contratos){
         ContratosDto result = new ContratosDto();
         result.setId(contratos.getId());
         result.setVeiculo(contratos.getVeiculo());
         result.setNomeDevedor(contratos.getNomeDevedor());
         result.setDataNascimentoDevedor(contratos.getDataNascimentoDevedor());
-        result.setNumeroRegistroEletronic(contratos.getNumeroRegistroEletronico());
+        result.setNumeroRegistroEletronico(contratos.getNumeroRegistroEletronico()); // Corrigir nome do método
         return result;
     }
 
-
-    public List<ContratosDto>  getall(){
+    public List<ContratosDto> getall(){
         return repository
                 .findAll()
                 .stream()
-                .map(this::converter).collect(Collectors.toList());
+                .map(this::converter)
+                .collect(Collectors.toList());
+    }
+
+    public ContratosDto getById(Long contratosId){
+        return toDto(repository.findById(contratosId).orElse(null));
     }
 
     public String delete(Long contratosId){
@@ -54,5 +59,13 @@ public class ContratosFacade {
         return "DELETED";
     }
 
-
+    private ContratosDto toDto(Contratos contratos) {
+        if (contratos == null) return null;
+        ContratosDto contratosDto = new ContratosDto();
+        contratosDto.setNumeroRegistroEletronico(contratos.getNumeroRegistroEletronico());
+        contratosDto.setId(contratos.getId());
+        contratosDto.setVeiculo(contratos.getVeiculo());
+        contratosDto.setNomeDevedor(contratos.getNomeDevedor());
+        return contratosDto;
+    }
 }

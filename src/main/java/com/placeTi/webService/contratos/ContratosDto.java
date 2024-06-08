@@ -40,7 +40,7 @@ public class ContratosDto {
         return numeroRegistroEletronico;
     }
 
-    public void setNumeroRegistroEletronic(String numeroRegistroEletronico) {
+    public void setNumeroRegistroEletronico(String numeroRegistroEletronico) {
         this.numeroRegistroEletronico = numeroRegistroEletronico;
     }
 

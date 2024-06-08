@@ -29,7 +29,8 @@ public class VeiculosAPI {
     @GetMapping
     @ResponseBody
     public List<VeiculosDto> getAll(){
-        return veiculosFacade.getall();
+        List<VeiculosDto> veiculosDto= veiculosFacade.getall();
+        return veiculosDto;
     }
 
     @DeleteMapping("/{veiculosId}")

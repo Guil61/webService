@@ -1,6 +1,7 @@
 package com.placeTi.webService.contratos;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.placeTi.webService.veiculos.Veiculos;
 import jakarta.persistence.*;
 
@@ -20,6 +21,8 @@ public class Contratos {
     private LocalDate dataNascimentoDevedor;
     private String numeroRegistroEletronico;
 
+
+    @JsonIgnore
     @OneToMany(mappedBy = "contrato")
     private List<Veiculos> veiculos;
 
@@ -64,4 +67,8 @@ public class Contratos {
     public void setVeiculo(List<Veiculos> veiculo) {
         this.veiculos = veiculo;
     }
+
+
+
+
 }

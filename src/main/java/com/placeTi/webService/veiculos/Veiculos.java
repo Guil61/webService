@@ -1,6 +1,7 @@
 package com.placeTi.webService.veiculos;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.placeTi.webService.contratos.Contratos;
 import jakarta.persistence.*;
 
@@ -17,6 +18,7 @@ public class Veiculos {
     private String placa;
     private String numeroChassi;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "contrato_id")
     private Contratos contrato;
@@ -67,5 +69,17 @@ public class Veiculos {
 
     public void setContrato(Contratos contrato) {
         this.contrato = contrato;
+    }
+
+    public Veiculos(Long id, String numeroGravame, String numeroRenavam, String placa, String numeroChassi, Contratos contrato) {
+        this.id = id;
+        this.numeroGravame = numeroGravame;
+        this.numeroRenavam = numeroRenavam;
+        this.placa = placa;
+        this.numeroChassi = numeroChassi;
+        this.contrato = contrato;
+    }
+
+    public Veiculos() {
     }
 }
