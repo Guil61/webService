@@ -23,7 +23,7 @@ public class Contratos {
 
 
     @JsonIgnore
-    @OneToMany(mappedBy = "contrato")
+    @OneToMany(mappedBy = "contrato", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Veiculos> veiculos;
 
 
