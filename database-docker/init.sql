@@ -1,7 +1,3 @@
-CREATE DATABASE webService;
-
-/connect webService;
-
 CREATE TABLE contratos (
     id SERIAL PRIMARY KEY,
     nome_devedor VARCHAR(255) NOT NULL,
