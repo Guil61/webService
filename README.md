@@ -279,50 +279,6 @@ JSON
 
 ```
 
-### GET /veiculos/{id}
-
-**Descrição:** Retorna um veiculo específico pelo ID.
-
-**Exemplo de Requisição:**
-
-Bash
-
-```
-http://localhost:8080/veiculos/
-
-```
-
-
-**Exemplo de Resposta:**
-
-JSON
-
-```
-[
-    {
-        "id": 2,
-        "numeroGravame": "000000",
-        "numeroRenavam": "123123",
-        "placa": "ABC123",
-        "numeroChassi": "3123213",
-        "contrato": {
-            "id": 1,
-            "nomeDevedor": "Fulano de Tal",
-            "dataNascimentoDevedor": "1990-01-05",
-            "numeroRegistroEletronico": "ABCDE12322245",
-            "veiculo": [
-                {
-                    "id": 2,
-                    "numeroGravame": "000000",
-                    "numeroRenavam": "123123",
-                    "placa": "ABC123",
-                    "numeroChassi": "3123213"
-                }
-            ]
-        }
-    }
-]
-```
 
 
 ### POST /veiculos
