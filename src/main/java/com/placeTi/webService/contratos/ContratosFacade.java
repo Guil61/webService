@@ -28,7 +28,7 @@ public class ContratosFacade {
         contratosDataBase.setNomeDevedor(contratosDto.getNomeDevedor());
         contratosDataBase.setDataNascimentoDevedor(contratosDto.getDataNascimentoDevedor());
         contratosDataBase.setNumeroRegistroEletronico(contratosDto.getNumeroRegistroEletronico());
-        repository.save(contratosDataBase); // Salvar as alterações no banco de dados
+        repository.save(contratosDataBase);
         return contratosDto;
     }
 
@@ -38,7 +38,7 @@ public class ContratosFacade {
         result.setVeiculo(contratos.getVeiculo());
         result.setNomeDevedor(contratos.getNomeDevedor());
         result.setDataNascimentoDevedor(contratos.getDataNascimentoDevedor());
-        result.setNumeroRegistroEletronico(contratos.getNumeroRegistroEletronico()); // Corrigir nome do método
+        result.setNumeroRegistroEletronico(contratos.getNumeroRegistroEletronico());
         return result;
     }
 
