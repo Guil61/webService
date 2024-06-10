@@ -327,60 +327,10 @@ JSON
 ```
 
 
-### PUT /veiculos/{id}
-
-**Descrição:** Atualiza um veiculo existente pelo ID.
-
-**Exemplo de Requisição:**
-
-Bash
-
-```
-http://localhost:8080/veiculos/2
-```
-
-JSON
-
-```
-{   
-{
-    "numeroGravame" : "NUMERO ATUALIZADO",
-    "numeroRenavam" : "123123",
-    "placa" : "ABC123",
-    "numeroChassi" : "3123213",
-    "contrato": {
-        "id" : 1
-    }
-}
-}
-
-```
 
 
-**Exemplo de Resposta:**
 
-JSON
-
-```
-{
-    "id": null,
-    "numeroGravame": "NUMERO ATUALIZADO",
-    "numeroRenavam": "123123",
-    "placa": "ABC123",
-    "numeroChassi": "3123213",
-    "contrato": {
-        "id": 1,
-        "nomeDevedor": null,
-        "dataNascimentoDevedor": null,
-        "numeroRegistroEletronico": null,
-        "veiculo": null
-    }
-}
-
-```
-
-
-### DELETE /recursos/{id}
+### DELETE /veiculos/{id}
 
 **Descrição:** Exclui um veiculo pelo ID.
 
