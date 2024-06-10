@@ -50,7 +50,7 @@ Siga estas instruções para ter o projeto rodando na sua máquina local:
 
 4. **Opcional: Rodar a aplicação localmente pela IDE**
 
-   Caso deseje rodar a aplicação localmente pela IDE, deve-se pausar o container da aplicação do Docker ("app"). Ou case prefira pelo terminal
+   Caso deseje rodar a aplicação localmente pela IDE, deve-se pausar o container da aplicação do Docker ("app"). Ou caso prefira pelo terminal:
 
     Bash
    
@@ -66,7 +66,7 @@ Siga estas instruções para ter o projeto rodando na sua máquina local:
 
     
 
-Agora você pode acessar a aplicação em `http://localhost:8080` (ou a porta que você configurou no `docker-compose.yml`).
+Agora você pode acessar a aplicação em `http://localhost:8080` (ou configure outra porta no `docker-compose.yml`).
 
 
 
