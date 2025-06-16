@@ -1,5 +1,5 @@
 
-## Projeto Case Técnico WebService para a empresa PlaceTi!
+## Projeto Case Técnico WebService que me proporcionou minha primeira vaga de estágio!
 
 Este é um projeto CRUD (Create, Read, Update, Delete) completo, desenvolvido com Java SpringBoot, Docker e o banco de dados Postgres para facilitar a criação, leitura, atualização e exclusão de dados de forma eficiente.
 
